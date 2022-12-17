@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "update-ai-background.bat", 0, True
