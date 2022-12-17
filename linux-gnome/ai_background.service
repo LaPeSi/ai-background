@@ -1,0 +1,10 @@
+[Unit]
+Description=AI background python script
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/python3 [X]
+[Install]
+WantedBy=multi-user.target
