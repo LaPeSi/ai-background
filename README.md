@@ -16,7 +16,7 @@
 4. Save the file
 5. Restart your computer
 
-## Windows 11 Remove Installation
+## Windows 11 Uninstall
 1. Press Windows Key + R
 2. Delete the "HideUpdateAiBackground.vbs" file from the startup folder
 3. Delete the cloned repository
