@@ -2,6 +2,13 @@
  Desktop background image that is ai generated and updates automatically every few minutes.
  The image is taken from http://lape.si:8080/apps/ai-background/image.
 
+ ### Optional:
+ Change the type of image by changing the url to the following:
+
+ **Wikipedia Articles**: http://lape.si:8080/apps/ai-background/wikipedia/image
+
+ **Landscapes**: http://lape.si:8080/apps/ai-background/landscape/image
+
 ## Windows 11 Installation
 1. Clone the repository
 2. Press Windows Key + R
