@@ -3,7 +3,7 @@
  The image is taken from http://lape.si:8080/apps/ai-background/image.
 
  ### Optional:
- Change the type of image or amount of images (combined -> 4 images) by changing the url to the following:
+ Change the type of image or amount of images (combined -> 6 images) by changing the url to the following:
 
  **Wikipedia Articles**: http://lape.si:8080/apps/ai-background/wikipedia/image (currently not updating)
 
@@ -34,7 +34,6 @@
 4. Restart your computer
 
 ## Linux Gnome Installation
-
 1. Place the linux-gnome folder in any directory X
 2. Change the line: `ExecStart=/usr/bin/python3 [Y]`
 and replace [Y] with the absolute path of the main.py file.
@@ -44,4 +43,15 @@ and replace [Y] with the absolute path of the main.py file.
 
 
 ## Linux Gnome Troubleshooting
+1. Place the linux-gnome folder in any directory 
+2. Change the line: `ExecStart=/usr/bin/python3 [X]` in the ai_background.service file
+by replacing [X] with the absolute path of the main.py file.
+3. Change the line: `User=[Y]` in the ai_background.service file
+by replacing [Y] with your username.
+4. Place the ai_background.service file in `/etc/systemd/system` 
+(might be differrent in some distributions)
+5. Use the command `sudo systemctl enable ai_background` to make the application autostart after boot.
+
+
+# Linux Gnome Troubleshooting
  - If the background is not changing properly, try to set the tmp image in the X folder as a background manually.
