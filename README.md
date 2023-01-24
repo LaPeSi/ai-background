@@ -44,5 +44,5 @@ by replacing [Y] with your username.
 5. Use the command `sudo systemctl enable ai_background` to make the application autostart after boot.
 
 
-# Linux Gnome Troubleshooting
+## Linux Gnome Troubleshooting
  - If the background is not changing properly, try to set the tmp image in the X folder as a background manually.
