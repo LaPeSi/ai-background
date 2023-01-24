@@ -6,5 +6,6 @@ Type=simple
 Restart=always
 RestartSec=10
 ExecStart=/usr/bin/python3 [X]
+User=[Y]
 [Install]
 WantedBy=multi-user.target
