@@ -34,15 +34,6 @@
 4. Restart your computer
 
 ## Linux Gnome Installation
-1. Place the linux-gnome folder in any directory X
-2. Change the line: `ExecStart=/usr/bin/python3 [Y]`
-and replace [Y] with the absolute path of the main.py file.
-3. place the ai_background.service file in `/etc/systemd/system` 
-(might be diffrerent in some distributions)
-4. use the command `sudo systemctl enable ai_background` to make the application autostart after boot.
-
-
-## Linux Gnome Troubleshooting
 1. Place the linux-gnome folder in any directory 
 2. Change the line: `ExecStart=/usr/bin/python3 [X]` in the ai_background.service file
 by replacing [X] with the absolute path of the main.py file.
