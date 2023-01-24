@@ -3,11 +3,15 @@
  The image is taken from http://lape.si:8080/apps/ai-background/image.
 
  ### Optional:
- Change the type of image by changing the url to the following:
+ Change the type of image or amount of images (combined -> 4 images) by changing the url to the following:
 
- **Wikipedia Articles**: http://lape.si:8080/apps/ai-background/wikipedia/image
+ **Wikipedia Articles**: http://lape.si:8080/apps/ai-background/wikipedia/image (currently not updating)
 
  **Landscapes**: http://lape.si:8080/apps/ai-background/landscape/image
+
+ **Combined**: http://lape.si:8080/apps/ai-background/combined
+
+ **Combined Landscapes**: http://lape.si:8080/apps/ai-background/landscape/combined
 
 ## Windows 11 Installation
 1. Clone the repository
