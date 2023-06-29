@@ -33,10 +33,11 @@
 3. Delete the cloned repository
 4. Restart your computer
 
-## Linux Gnome Installation
-1. Place the linux-gnome folder in any directory 
+## Linux Installation
+1. Place the linux folder anywhere in your system
+2. Choose the right subfolder according to your desktop environment and copy the path to main.py
 2. Change the line: `ExecStart=/usr/bin/python3 [X]` in the ai_background.service file
-by replacing [X] with the absolute path of the main.py file.
+by replacing [X] with the absolute path of your main.py file.
 3. Change the line: `User=[Y]` in the ai_background.service file
 by replacing [Y] with your username.
 4. Place the ai_background.service file in `/etc/systemd/system` 
