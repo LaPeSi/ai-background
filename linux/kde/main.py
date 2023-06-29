@@ -1,6 +1,7 @@
 import requests
 import time
 import os
+import dbus
 
 tmp_file_path = os.path.split(os.path.abspath(__file__))[0] + "/ai_background_tmp.jpg"
 
@@ -19,18 +20,30 @@ def get_image():
         f.flush()
 
 
-def set_image():
+def kde_set_image():
     # set as background
-    os.system("gsettings set org.gnome.desktop.background picture-uri-dark file://" + tmp_file_path)
-    time.sleep(2)
-    os.system("cp " + tmp_file_path + " ~/.config/background")
+
+    jscript = """
+    var allDesktops = desktops();
+    print (allDesktops);
+    for (i=0;i<allDesktops.length;i++) {
+        d = allDesktops[i];
+        d.wallpaperPlugin = "%s";
+        d.currentConfigGroup = Array("Wallpaper", "%s", "General");
+        d.writeConfig("Image", "file://%s")
+    }
+    """
+    bus = dbus.SessionBus()
+    plasma = dbus.Interface(bus.get_object(
+        'org.kde.plasmashell', '/PlasmaShell'), dbus_interface='org.kde.PlasmaShell')
+    plasma.evaluateScript(jscript % ('org.kde.image', 'org.kde.image', tmp_file_path))
 
 
 def run(time_between_images=60):
     while True:
         get_image()
         time.sleep(3)  # short delay to ensure image is written to the disk properly
-        set_image()
+        kde_set_image()
         time.sleep(time_between_images)
 
 
