@@ -14,7 +14,7 @@
  **Combined Landscapes**: http://lape.si:8080/apps/ai-background/landscape/combined
 
 ## Windows 11 Installation
-1. Clone the repository
+1. Place the windows folder anywhere in your system
 2. Press Windows Key + R
 3. Type in "shell:startup"
 4. Create a shortcut to the "HideUpdateAiBackground.vbs" file in the startup folder (it will start update-ai-background.bat headless on startup)
